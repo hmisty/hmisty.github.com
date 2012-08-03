@@ -22,23 +22,22 @@ So happy writing is upgraded to happier writing! :-)
 - git push to github
 - done!
 
-Blogging template for GitHub pages
-==================================
-
-	buzzwords:
-	- jekyll
-	- responsive web design (initializr-template)
-	assets:
-	- jquery 1.7.1
-	- twitter bootstrap 2.0.2
-	- modernizr 2.5.3
-	seo:
-	- microformats
-	- rich snippets
-	- page-specific title and description
-	sosials:
-	- +1
-	- tweet
+Blogging by GitHub pages
+-----------
+buzzwords:
+- jekyll
+- responsive web design (initializr-template)
+assets:
+- jquery 1.7.1
+- twitter bootstrap 2.0.2
+- modernizr 2.5.3
+seo:
+- microformats
+- rich snippets
+- page-specific title and description
+sosials:
+- +1
+- tweet
 
 Usage
 -----
