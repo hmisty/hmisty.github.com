@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Evan Hmisty</title>
+    <link href="{{ site.url }}/atom.xml" rel="self"/>
+    <link href="{{ site.url }}"/>
+    <updated>{{ site.time }}</updated>
+	<id>http://hmisty.com</id>
+	<author>
+        <name>Evan Hmisty</name>
+		<email>hmisty@gmail.com</email>
+	</author>
+
+    {% for post in site.posts %}
+			<entry>
+                <title>{{ post.title }}</title>
+                <link href="{{ site.url }}{{ post.url }}"/>
+                <updated>{{ post.date | date_to_string }}</updated>
+                <id>{{ site.url }}{{ post.url }}</id>
+                <content type="html">{{ post.content }}</content>
+			</entry>
+    {% endfor %}
+</feed>
