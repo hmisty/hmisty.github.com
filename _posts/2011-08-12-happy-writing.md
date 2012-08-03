@@ -10,10 +10,10 @@ tags:
 
 ---
 ## tools
-vim
-docpad
+- vim
+- docpad
 
 ## howto
-vi to write in markdown
-docpad to generate
-nginx to serve
+- vi to write in markdown
+- docpad to generate
+- nginx to serve
