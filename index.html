@@ -1,3 +1,33 @@
 ---
-layout: default
+layout: 'page'
+title: Welcome
 ---
+
+<!-- Posts -->
+<section id="entries">
+{% for post in site.posts limit: 5 %}
+    <div class="entry">
+        <h1>
+            <a href="{{ post.url }}" property="dc:title">{{ post.title }}</a>
+        </h1>
+        <div class="date">By {{ post.author }} &middot; <span property="dc:created">{{ post.date | date_to_string }}</span></div>
+        <div class="body">
+            {{ post.content }}
+        </div>
+        <div class="footer">
+            <a href="{{ post.url }}#disqus_thread"></a>
+        </div>
+    </div>
+    <% end %>
+<% end %>
+</section>
+<script defer type="text/javascript">
+    //<![CDATA[
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        //]]> 
+</script>
