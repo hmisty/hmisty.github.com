@@ -12,7 +12,8 @@ title: Welcome
         </h1>
         <div class="date">By {{ post.author }} &middot; <span property="dc:created">{{ post.date | date_to_string }}</span></div>
         <div class="body">
-            {{ post.content | truncatewords: 100 | append: ' ...'  }}
+            {{ post.content | truncatewords: 100 }}
+            (<a href="{{ post.url }}">full text</a>)
         </div>
         <div class="footer">
             <a href="{{ post.url }}#disqus_thread"></a>
