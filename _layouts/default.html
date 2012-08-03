@@ -34,7 +34,11 @@
         //]]> 
     </script>
 </head>
+{% if page.id %}
 <body id="page-{{ page.id }}">
+{% else %}
+<body>
+{% endif %}
 	<div id="body">
 		<header id="header">
             <div class="menu">
@@ -52,7 +56,7 @@
 		</div>
 
 		<footer id="footer">
-        &copy;{{ page.date | date: "%Y" }} EVAN HMISTY LIU - 
+        &copy;{{ 'now' | date: "%Y" }} EVAN HMISTY LIU - 
                 <a href="/about.html">ABOUT ME</a>
             -
             <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons License</a>

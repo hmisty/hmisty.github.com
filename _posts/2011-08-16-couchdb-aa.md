@@ -1,9 +1,13 @@
 ---
 layout: post
 title: CouchDB Authentication & Authorization
-tags: [couchdb,authentication,authorization,nosql]
 date: '2011-08-16'
-author: Evan Liu
+author: Evan
+tags:
+- couchdb
+- authentication
+- authorization
+- nosql
 ---
 Recently I looked a lot into couchdb and found it has great potential to extremely power the mobile application development, because it is:
 

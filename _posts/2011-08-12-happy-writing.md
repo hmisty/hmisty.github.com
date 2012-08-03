@@ -1,9 +1,12 @@
 ---
 layout: post
 title: Happy writing
-tags: [random,happy,writing]
 date: '2011-08-12'
-author: Evan Liu
+author: Evan
+tags:
+- random
+- happy
+- writing
 ---
 ## tools
 vim
