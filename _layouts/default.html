@@ -1,74 +1,94 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Standard -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-	{% if page.title %}
-	<title>{{ page.title }} &raquo; {{ site.title }}</title>
-	{% else %}
-	<title>{{ site.title }}</title>
-	{% endif %}
-	<meta name="description" content="{{ page.description }}">
-	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="/css/style.css" />
-	<script src="/js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+    {% if page.title %}
+    <title>{{ page.title }} &raquo; {{ site.title }} </title>
+    <meta name="title" content="{{ page.title }} &raquo; {{ site.title}}" />
+    {% else %}
+    <title>{{ site.title }}</title>
+    <meta name="title" content="{{ page.title }}" />
+    {% endif %}
+
+	<!-- SEO Information -->
+	<meta name="author" content="Evan Liu, Qingyan" />
+	<meta name="email" content="hmisty@gmail.com" />
+	<meta name="description" content="Evan Liu, Qingyan. Technology For Fun." />
+	<meta name="keywords" content="evan, hmisty, liu, qingyan, technology, fun, couchdb, coffeescript, node.js, javascript, html5, docpad, jquery, css3, git, nosql, ajax, html, web development, web design, nlp, git, programming, hacking, innovation, web 2.0"/>
+
+	<!-- RSS Links -->
+	<link href="http://feeds.feedburner.com/hmisty" rel="alternate" title="Evan Liu, Qingyan" type="application/atom+xml" />
+
+	<!-- Site CSS -->
+	<link rel="stylesheet" href="/styles/blog.css" type="text/css" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+
+	<!-- Script -->
+    <script type="text/javascript">
+        //<![CDATA[
+        var disqus_shortname = 'liuqy';
+        //]]> 
+    </script>
 </head>
+<body id="page-{{ self.slug }}">
+	<div id="body">
+		<header id="header">
+            <div class="menu">
+                <span><a href="/atom.xml">FEED</a></span>
+                <span><a href="/archive.html">ARCHIVE</a></span>
+                <span><a href="/about.html">ABOUT ME</a></span>
+            </div>
+            <div class="title">
+                <a href="/">EVAN HMISTY LIU</a>
+            </div>
+		</header>
 
-<body>
-<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+		<div id="content">
+            {{ content }}
+		</div>
 
-<div id="header-container">
-<header class="wrapper clearfix">
-	<h1 id="title">{{ site.title }}</h1>
-	<nav>{% include menulist.html %}</nav>
-</header>
-</div> <!-- #header-container -->
+		<footer id="footer">
+        &copy;{{ page.date | date: "%Y" }} EVAN HMISTY LIU - 
+                <a href="/about.html">ABOUT ME</a>
+            -
+            <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons License</a>
+		</footer>
 
-<div id="main-container">
-<div id="main" class="wrapper clearfix">
+        <footer id="footer2">
+            Powered By
+            <a href="http://www.w3.org/TR/html5">html5</a>
+            , 
+            <a href="http://git-scm.com">git</a>
+            ,
+            <a href="http://pages.github.com">github pages</a>
+            , 
+            <a href="http://daringfireball.net/projects/markdown">markdown</a>
+            ,
+            <a href="http://disqus.com">disqus</a>
+            ,
+            <a href="http://www.google.com/analytics">Google Analytics</a>
+            . Inspired by 
+            <a href="http://bret.appspot.com">Bret Taylor's blog</a>
+            .
+        </footer>
+	</div>
+ 
+    <script defer type="text/javascript">
+            //<![CDATA[
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-7092935-5']);
+              _gaq.push(['_trackPageview']);
 
-	{{ content }}
-
-</div> <!-- #main -->
-</div> <!-- #main-container -->
-
-<div id="footer-container">
-<footer class="wrapper">
-	<h3>footer</h3>
-</footer>
-</div> <!-- #footer-container -->
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-<script src="/js/libs/bootstrap.min.js"></script>
-<script src="/js/script.js"></script>
-
-<!-- Google +1 -->
-<script type="text/javascript">
-(function() {
-	var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-	po.src = 'https://apis.google.com/js/plusone.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-})();
-</script>
-
-<!-- Tweet button -->
-<script type="text/javascript">
-!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-</script>
-
-<!-- Google analytics -->
-<script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
-
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+            //]]> 
+        </script>
 </body>
 </html>
