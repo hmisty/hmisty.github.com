@@ -57,3 +57,11 @@ ul.archive .title {
     font-family: "Helvetica Nue", Helvetica, Arial, sans-serif;
     font-size: 14pt;
 } 
+
+#related h2 {
+	font-size: 18pt;
+}
+
+#related li {
+	margin-top: 0.5em;
+}

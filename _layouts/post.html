@@ -13,27 +13,29 @@ layout: default
     </article>
 </section>
 
-<!--
+<p>&nbsp;</p>
+
 {% if site.related_posts.size > 0 %}
 <section id="related">
-	<h1>Related Posts</h3>
-	<nav class="linklist">
+	<h2>Related Posts</h2>
+	<ul>
         {% for post in site.related_posts %}
         <li><span>{{ post.date | date_to_string }}</span>
 			&raquo;
             <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
 		{% endfor %}
-	</nav>
+	</ul>
 </section>
 {% endif %}
--->
 
-<!--section id="comments">
+<p>&nbsp;</p>
+
+<section id="comments">
 	<div id="disqus_thread"></div>
 	<script defer>
         //<![CDATA[
         var disqus_identifier = '{{ page.id }}';
-        var disqus_url = '{{ site.url }}{{ post.url }}';
+        var disqus_url = '{{ site.url }}{{ page.url }}';
         
         (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -43,4 +45,4 @@ layout: default
         //]]> 
 	</script>
 	<noscript>life would be cooler if you enabled javascript *sigh*</noscript>
-</section-->
+</section>
