@@ -1,0 +1,6 @@
+        <li>
+            <div class="title">
+                <a href="{{ post.url }}" property="dc:title">{{ post.title }}</a>
+            </div>
+            <div class="date"><span property="dc:created">{{ post.date | date_to_string }}</span></div>
+        </li>

@@ -6,12 +6,7 @@ title: 'Archive'
 <section id="entries">
     <ul class="archive">
     {% for post in site.posts %}
-        <li>
-            <div class="title">
-                <a href="{{ post.url }}" property="dc:title">{{ post.title }}</a>
-            </div>
-            <div class="date"><span property="dc:created">{{ post.date | date_to_string }}</span></div>
-        </li>
+    {% include post-list-item.html %}
     {% endfor %}
     </ul>
 </section>
