@@ -2,17 +2,18 @@
 layout: default
 ---
 <section id="entries">
-<article class="entry" typeof="sioc:post" about="{{ site.url }}{{ post.url }}" lang="en-us">
+<article class="entry" typeof="sioc:post" about="{{ site.url }}{{ page.url }}">
         <h1 property="dcterms:title">
-            <a href="{{ site.url }}{{ post.url }}" property="dc:title">{{ post.title }}</a>
+            <a href="{{ site.url }}{{ page.url }}" property="dc:title">{{ page.title }}</a>
         </h1>
-        <div class="date">By {{ post.author }} &middot; <span property="dc:created">{{ post.date | date_to_string }}</span></div>
+        <div class="date">By {{ page.author }} &middot; <span property="dc:created">{{ page.date | date_to_string }}</span></div>
         <div class="body" property="sioc:content">
             {{ content }}
         </div>
     </article>
 </section>
 
+<!--
 {% if site.related_posts.size > 0 %}
 <section id="related">
 	<h1>Related Posts</h3>
@@ -21,10 +22,11 @@ layout: default
         <li><span>{{ post.date | date_to_string }}</span>
 			&raquo;
             <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
-		<% end %>
+		{% endfor %}
 	</nav>
 </section>
 {% endif %}
+-->
 
 <!--section id="comments">
 	<div id="disqus_thread"></div>

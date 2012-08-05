@@ -1,10 +1,6 @@
 ---
-layout: default
-title: Something about my blog
-description: Something more
+layout: page 
+title: About Me
 ---
-
-{{ page.title }}
-================
 
 I like to blog ...
