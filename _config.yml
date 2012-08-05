@@ -1,12 +1,12 @@
 title: Evan Hmisty
-#url: http://www.mydomain.com
+url: http://hmisty.com
 
 markdown: rdiscount
 pygments: true
-permalink: /:year/:month/:day/:title
+permalink: /:year/:month/:day/:title.html
 
 lsi: true
-paginate: 20
+paginate: 2
 
 exclude:
 - CNAME
