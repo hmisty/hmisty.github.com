@@ -31,7 +31,7 @@ layout: 'page'
 			<li><a href="/page{{paginator.previous_page}}">Prev</a></li>
 			{% endif %}
 		{% else %}
-			<li><a href="#">Prev</a></li>
+			<li class="disabled"><a href="#">Prev</a></li>
 		{% endif %}
 
 		{% if paginator.page == 1 %}
@@ -51,7 +51,7 @@ layout: 'page'
 		{% if paginator.next_page %}
 			<li><a href="/page{{paginator.next_page}}">Next</a></li>
 		{% else %}
-			<li><a href="#">Next</a></li>
+			<li class="disabled"><a href="#">Next</a></li>
 		{% endif %}
 	</ul>
 </div>
