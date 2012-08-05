@@ -26,8 +26,14 @@
 
 	<!-- Site CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
-	<link href="/css/blog.css" rel="stylesheet" type="text/css"/>
     <link href="/css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link href="/css/blog.css" rel="stylesheet" type="text/css"/>
+
+	<style>
+		@media (min-width: 768px) {
+			body { padding-top: 60px; } /* 60px to make the container go all the way to the bottom of the topbar */
+		}
+	</style>
 
 	<!-- Script -->
     <script type="text/javascript">
@@ -35,6 +41,21 @@
         var disqus_shortname = 'liuqy';
         //]]> 
     </script>
+
+	<!-- Google Analytics -->
+    <script defer type="text/javascript">
+            //<![CDATA[
+              var _gaq = _gaq || [];
+              _gaq.push(['_setAccount', 'UA-7092935-5']);
+              _gaq.push(['_trackPageview']);
+
+              (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+              })();
+            //]]> 
+	</script>
 </head>
 {% if page.id %}
 <body id="page-{{ page.id }}">
@@ -99,19 +120,10 @@
 
     </div><!--/.container"-->
 
+	<!-- Place at the end for faster page loading -->
+	<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-transition.js"></script>
+	<script type="text/javascript" src="/js/bootstrap-collapse.js"></script>
  
-    <!--script defer type="text/javascript">
-            //<![CDATA[
-              var _gaq = _gaq || [];
-              _gaq.push(['_setAccount', 'UA-7092935-5']);
-              _gaq.push(['_trackPageview']);
-
-              (function() {
-                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-              })();
-            //]]> 
-        </script-->
 </body>
 </html>

@@ -18,7 +18,7 @@ So happy writing is upgraded to happier writing! :-)
 - github pages
 
 ## howto
-- vi to write in markdown
+- vim to write in markdown
 - git push to github
 - done!
 
@@ -36,7 +36,7 @@ Here describes my painless journey:
 4. git clone git@github.com:hmisty/hmisty.github.com.git <br>
    cd hmisty.github.com
 5. (terminal 1) jekyll --server <br>
-   (terminal 2) vim <br>
-   (terminal 3) run jekyll everytime you modified the document to re-generate the _site & refresh the browser browsing http://localhost:4000
+   (terminal 2) run jekyll everytime you modified the document to re-generate the _site & refresh the browser browsing http://localhost:4000
+   (terminal 3) vim <br>
 
 Enjoy!
