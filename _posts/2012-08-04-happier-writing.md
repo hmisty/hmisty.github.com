@@ -30,7 +30,7 @@ I am the first time trying Ruby powered tool and I am amazed about how easy it i
 Here describes my painless journey:
 
 1. USE ubuntu 12.04 (important for being painless! do not try windows :)
-2. sudo apt-get install rubygems
+2. sudo apt-get install git vim-nox rubygems
 3. sudo gem install jekyll rdiscount <br>
    if you are behind a proxy, try: sudo gem install --http-proxy http://proxy-ip:proxy-port jekyll rdiscount
 4. git clone git@github.com:hmisty/hmisty.github.com.git <br>
